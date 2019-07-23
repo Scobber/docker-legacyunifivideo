@@ -1,5 +1,5 @@
 FROM debian:stretch
-RUN apt-get update && apt-get install -y wget
+RUN apt-get update && apt-get install -y mongodb-server sudo lsb-release java7-runtime-headless jsvc wget
 RUN wget https://dl.ui.com/firmwares/unifi-video/3.1.5/unifi-video_3.1.5~Debian7_amd64.deb
 RUN dpkg -i unifi-video_3.1.5~Debian7_amd64.deb
 RUN apt-get update && apt-get upgrade -y -i
